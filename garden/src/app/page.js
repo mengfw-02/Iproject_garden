@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1 className = "text-5xl font-bold m-10">
-        Add data
+        Diary Page
       </h1>
       <form onSubmit={ handleSubmit } className = 'max-w-md mx-auto p-4 bg-white shadow-md rounded-lg'>
         <div className = 'mb-4'>
