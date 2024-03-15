@@ -2,6 +2,8 @@
 import { db } from './firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
+import {Auth} from "./auth.js"
+
 
 async function addDataToFireStore(name, email, message) {
   try {
@@ -40,8 +42,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
       <h1 className = "text-5xl font-bold m-10">
-        Diary Page
+        Diary Page 
       </h1>
+      <h2> <Auth /></h2>
       <form onSubmit={ handleSubmit } className = 'max-w-md mx-auto p-4 bg-white shadow-md rounded-lg'>
         <div className = 'mb-4'>
           <label htmlFor='name' className='block text-gray-700 font-bold mb-2'>
