@@ -8,6 +8,7 @@ export const Auth = () => {
 
     const signIn = async () => {
         try {
+        // createUserWithEmailAndPassword
             const added = await createUserWithEmailAndPassword(auth, email, password);
             if (added) {
                 alert("Successfull!")
@@ -41,10 +42,14 @@ export const Auth = () => {
     return (
         <div>
             <input
+                className="inputStyle"
                 placeholder="Email..."
+                style={{ color: '#333' }}
                 onChange={(e) => setEmail(e.target.value)}
             />
             <input
+                className="inputStyle"
+                 style={{ color: '#333' }}
                 placeholder="Password..."
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}

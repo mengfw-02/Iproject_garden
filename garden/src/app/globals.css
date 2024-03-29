@@ -18,12 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) 
+      rgb(var(--background-start-rgb));
+  background-color: #fff;
+  /* White background */
 }
 
 @layer utilities {
@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Targeting input and textarea fields within the form */
+input[type='text'],
+textarea {
+  color: #333;
+  /* Dark gray text color for visibility */
+}
+
+
+
