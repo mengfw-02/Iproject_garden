@@ -2,6 +2,8 @@
 import { db } from './firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
+import NavBar from '@/components/NavBar';
+
 
 async function addDataToFireStore(name, email, message) {
   try {
@@ -38,6 +40,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <NavBar/>
       <h1 className = "text-5xl font-bold m-10">
         Diary Page
       </h1>
