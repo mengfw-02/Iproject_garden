@@ -4,18 +4,13 @@ import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
 
-<style jsx>{`
-  .custom-form-width {
-    max-width: 800px; /* Custom width or use a percentage like 80% */
-  }
-`}</style>
 
-
-async function addDataToFireStore(title, description) {
+async function addDataToFireStore(name, email, message) {
   try {
-    const docRef = await addDoc(collection(db, "diary"),{
-      title: title,
-      description: description,
+    const docRef = await addDoc(collection(db, "messages"),{
+      name: name,
+      email: email,
+      message: message,
     });
     console.log("Document written with ID: ", docRef.id);
     return true;
@@ -26,14 +21,16 @@ async function addDataToFireStore(title, description) {
 }
 
 export default function Home() {
-  const [title, setTitle] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const added = await addDataToFireStore(title, message);
+    const added = await addDataToFireStore(name, email, message);
     if(added){
-      setTitle("");
+      setName("");
+      setEmail("");
       setMessage("");
 
       alert("Data added to firestore DB!!")
@@ -48,18 +45,26 @@ export default function Home() {
       <h1 className = "text-5xl font-bold m-10">
         New Diary Entry
       </h1>
-      <form onSubmit={ handleSubmit } className = 'max-w-xl mx-auto p-8 text-black bg-white shadow-md rounded-lg'>
+      <form onSubmit={ handleSubmit } className = 'max-w-md mx-auto p-4 bg-white shadow-md rounded-lg'>
         <div className = 'mb-4'>
-          <label htmlFor='title' className='block text-gray-700 font-bold mb-2'>
-            Title
+          <label htmlFor='name' className='block text-gray-700 font-bold mb-2'>
+            Name
           </label>
           <input type = 'text' id = 'name' className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
-            value =  {title}
-            onChange = {(e) => setTitle(e.target.value)}/>
+            value =  {name}
+            onChange = {(e) => setName(e.target.value)}/>
+
+
+          <label htmlFor='email' className='block text-gray-700 font-bold mb-2'>
+            Email
+          </label>
+          <input type = 'text' id = 'email' className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
+            value =  {email}
+            onChange = {(e) => setEmail(e.target.value)}/>
 
 
           <label htmlFor='message' className='block text-gray-700 font-bold mb-2'>
-          How Is Your Plant Doing?
+            Message
           </label>
           <textarea
             rows = {5}
