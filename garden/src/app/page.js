@@ -17,6 +17,22 @@ async function addDataToFireStore(name, email, message) {
     return false;
   }
 }
+//audio playing
+useEffect(() => {
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }
+
+
+  document.addEventListener('click', playAudio, {once: true });
+
+  return () => {
+    document.removeEventListener('click', playAudio);
+  };
+}, []);
+
 
 export default function Home() {
   const [name, setName] = useState("");
