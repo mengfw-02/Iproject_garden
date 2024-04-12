@@ -1,7 +1,7 @@
 'use client'
 import { db } from './firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 async function addDataToFireStore(name, email, message) {
   try {
@@ -22,6 +22,25 @@ export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  //This section of code handles autoplaying music for the webpage
+  //testing
+  useEffect(() => {
+    const playAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+    }
+  
+
+    document.addEventListener('click', playAudio, {once: true });
+
+    return () => {
+      document.removeEventListener('click', playAudio);
+    };
+  }, []);
+  //end of music code
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
