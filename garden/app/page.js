@@ -1,5 +1,9 @@
 'use client'
+<<<<<<< Updated upstream:garden/app/page.js
 import { db } from './firebase-config'
+=======
+import { db } from '../app/firebaseConfig'
+>>>>>>> Stashed changes:garden/src/pages/Diary.js
 import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 
@@ -18,7 +22,7 @@ async function addDataToFireStore(name, email, message) {
   }
 }
 
-export default function Home() {
+export default function Diary() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -64,12 +68,19 @@ export default function Home() {
           <label htmlFor='message' className='block text-gray-700 font-bold mb-2'>
             Message
           </label>
+<<<<<<< Updated upstream:garden/app/page.js
           <textarea
             row = {5}
+=======
+          {/* <textarea
+            rows = {5}
+>>>>>>> Stashed changes:garden/src/pages/Diary.js
             id = 'message' className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
             value =  {message}
-            onChange = {(e) => setMessage(e.target.value)}> </textarea>
+            onChange = {(e) => setMessage(e.target.value)}> 
+          </textarea> */}
         </div>
+
         <div className='text-center'>
           <button
             type = 'submit'
@@ -77,6 +88,7 @@ export default function Home() {
               Submit
             </button>
         </div>
+
       </form>
     </main>
   );
