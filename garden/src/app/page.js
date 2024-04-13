@@ -1,5 +1,5 @@
 'use client'
-import { db } from './firebaseConfig'
+import { db } from '../app/firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
@@ -61,11 +61,11 @@ export default function Home() {
           <label htmlFor='message' className='block text-gray-700 font-bold mb-2'>
           How Is Your Plant Doing?
           </label>
-          <textarea
+          {/* <textarea
             rows = {5}
             id = 'message' className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
             value =  {message}
-            onChange = {(e) => setMessage(e.target.value)}> </textarea>
+            onChange = {(e) => setMessage(e.target.value)}> </textarea> */}
         </div>
         <div className='text-center'>
           <button
