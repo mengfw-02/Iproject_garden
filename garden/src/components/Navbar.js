@@ -1,13 +1,15 @@
-// Navbar.js
+// navbar.js
 // @client
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "./Logo";
+import Logo from "./Logo"; // refer to Logo.js
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(false);
 
+  // here are our links
+  // these link name should match with the page names
   const links = [
     {
       id: 1,

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar";
-import { db } from '../app/firebaseConfig';
+import Navbar from "../components/Navbar"; // refer to Navbar.js
+import { db } from '../app/firebase-config'; // refer to firebase-config.js
 import { collection, addDoc } from 'firebase/firestore';
-import "../app/globals.css";
+import "../app/globals.css"; // refer to format file
 
 async function addDataToFireStore(title, description) {
   try {

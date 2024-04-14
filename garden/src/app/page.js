@@ -1,8 +1,9 @@
+// our main page
 'use client'
-import { db } from '../app/firebaseConfig'
+import { db } from '../app/firebase-config'; // refer to firebase-config, backend
 import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar"; // refer to Navbar component
 
 <style jsx>{`
   .custom-form-width {
@@ -25,11 +26,6 @@ async function addDataToFireStore(title, description) {
   }
 }
 
-export default function Diary() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-}
-
 export default function Home() {
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
@@ -44,8 +40,6 @@ export default function Home() {
       alert("Data added to firestore DB!!")
     }
   };
-
-  // testing
 
 
   return (
@@ -72,10 +66,8 @@ export default function Home() {
             rows = {5}
             id = 'message' className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
             value =  {message}
-            onChange = {(e) => setMessage(e.target.value)}> 
-          </textarea> */}
+            onChange = {(e) => setMessage(e.target.value)}> </textarea> */}
         </div>
-
         <div className='text-center'>
           <button
             type = 'submit'
@@ -83,7 +75,6 @@ export default function Home() {
               Submit
             </button>
         </div>
-
       </form>
     </main>
     </div>
