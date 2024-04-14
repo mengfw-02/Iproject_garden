@@ -1,6 +1,5 @@
 // diary page
 // please use ALL Lowercase letter for pages
-//
 import React, { useState } from 'react';
 import { db } from '../app/firebase-config'; // refer to firebase-config.js
 import { collection, addDoc } from 'firebase/firestore';
