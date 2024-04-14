@@ -3,26 +3,36 @@
 */
 
 import Navbar from "../components/Navbar"; // refer to navbar component
-import GardenBar from "../components/Diary-green-garden"; 
-import DiaryBar from "../components/Diary-entry"; 
+import GreenBar from "../components/Green-diary-bar" // import green bar
+import FlowerPot from "../components/Flower-pot" // import flower pot
+import GreyBar from "../components/Grey-diary-bar"; // import grey bar
+import WhiteBar from "../components/White-diary-entry"; // import white diary entry bar
 import "../app/globals.css"; // refer to format file
 
 export default function home() {
 
   return (
     <main>
-        <div className="bg-white">
-            <Navbar/>
-        </div>
-
+        
+        <Navbar/>
+        
+        {/* Garden bar */}
         <div className="bg-white" style={{ paddingTop: '15vh' }}>
-            <h2 className="text-2xl font-bold text-gray-900 px-6 lg:px-8 py-4">
+            <h2 className="text-2xl font-bold text-gray-900 px-6 lg:px-8 py-4 ml-2">
                 Check Out Your Garden
             </h2>
 
-            <div className="rounded-lg p-0 mx-6 lg:mx-8 overflow-y-auto">
-                <GardenBar/>
+            {/* Define style/sizes here */}
+            <div className="rounded-lg p-0 mx-6 lg:mx-10 flex justify-start items-center overflow-x-auto" >
+                <GreenBar style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 145, width: '100%'} }>
+                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/short-flower.svg'} altername={'short flower picture'}/>
+                    <FlowerPot path={'/short-flower.svg'} altername={'short flower picture'}/>
+                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
+                </GreenBar>
             </div>
+
         </div>
    
         {/* The while recent diary collection */}
@@ -31,9 +41,13 @@ export default function home() {
                 Recent Diary Entries
             </h2>
   
-            <div className="flex justify-center">
-                <DiaryBar/>
-            </div>
+            <div className="rounded-lg p-0 mx-6 lg:mx-20 flex justify-start items-center overflow-y-auto">
+                <GreyBar style={ {width: '100%', height: '300px'} }>
+                    <WhiteBar/>
+                    <WhiteBar/>
+                    <WhiteBar/>
+                </GreyBar>
+            </div>          
         </div>
 
     </main>
