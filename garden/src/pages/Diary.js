@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
 import { db } from '../app/firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
+import Logo from '../components/Logo';
 import "../app/globals.css";
 
+//backend
 async function addDataToFireStore(title, description) {
   try {
     const docRef = await addDoc(collection(db, "diary"), {
@@ -19,9 +21,11 @@ async function addDataToFireStore(title, description) {
 }
 
 export default function Home() {
+  //backend
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
 
+  //backend
   const handleSubmit = async (e) => {
     e.preventDefault();
     const added = await addDataToFireStore(title, message);
@@ -36,9 +40,11 @@ export default function Home() {
     <div>
       <Navbar/>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Logo/>
         <h1 className="text-5xl font-bold m-10">
           New Diary Entry
         </h1>
+        {/* backend ⬇️ */}
         <form onSubmit={handleSubmit} className='max-w-xl mx-auto p-8 text-black bg-white shadow-md rounded-lg'>
           <div className='mb-4'>
             <label htmlFor='title' className='block text-gray-700 font-bold mb-2'>
@@ -71,6 +77,7 @@ export default function Home() {
             </button>
           </div>
         </form>
+        
       </main>
       <style jsx>{`
         .custom-form-width {
