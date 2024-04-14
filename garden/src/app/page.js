@@ -4,7 +4,12 @@ import { db } from './firebase-config'; // refer to firebase-config, backend
 import { collection, addDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import Navbar from "../components/Navbar"; // refer to Navbar component
-import "./globals.css"; // refer to format file
+
+<style jsx>{`
+  .custom-form-width {
+    max-width: 800px; /* Custom width or use a percentage like 80% */
+  }
+`}</style>
 
 // add data to firebase
 async function addDataToFireStore(name, email, message) {
