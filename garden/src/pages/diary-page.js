@@ -1,8 +1,10 @@
+// diary page
+// please use all LOWERCASE letter for pages
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar";
-import { db } from '../app/firebaseConfig';
+import { db } from '../app/firebase-config'; // refer to firebase-config.js
 import { collection, addDoc } from 'firebase/firestore';
-import "../app/globals.css";
+import Navbar from "../components/Navbar"; // refer to Navbar.js
+import "../app/globals.css"; // refer to format file
 
 async function addDataToFireStore(title, description) {
   try {
