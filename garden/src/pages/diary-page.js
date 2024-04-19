@@ -5,6 +5,8 @@ import { db } from '../app/firebase-config'; // refer to firebase-config.js
 import { collection, addDoc } from 'firebase/firestore';
 import Navbar from "../components/Navbar"; // refer to Navbar.js
 import "../app/globals.css"; // refer to format file
+import ProgressBar from "../components/ProgressBar";
+import FlowerPot from "../components/Flower-pot";
 
 //backend
 async function addDataToFireStore(title, description) {
@@ -37,53 +39,96 @@ export default function Home() {
     }
   };
 
+  const [selectedTag, setSelectedTag] = useState('Heart-Leaved Aster');
+  const tagOptions = ['Heart-Leaved Aster', 'Sunflower', 'Rose', 'Daisy'];
+  const postsMade = 1;
+  const goalPosts = 5;
+
+  const handleTagChange = (event) => {
+    setSelectedTag(event.target.value);
+  };
+
   return (
     <div>
       <Navbar/>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Logo/>
-        <h1 className="text-5xl font-bold m-10">
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
+        <h1 className="text-5xl font-bold m-10 text-black">
           New Diary Entry
         </h1>
-        {/* backend ⬇️ */}
-        <form onSubmit={handleSubmit} className='max-w-xl mx-auto p-8 text-black bg-white shadow-md rounded-lg'>
-          <div className='mb-4'>
-            <label htmlFor='title' className='block text-gray-700 font-bold mb-2'>
-              Title
-            </label>
-            <input 
-              type='text' 
-              id='name' 
-              className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
+        <div className='container'>
+        <div className='form-container'>
+          {/* backend ⬇️ */}
+          <form onSubmit={handleSubmit} className='max-w-xl mx-auto p-8 text-black bg-white shadow-md rounded-lg'>
+            <div className='mb-4'>
+              <label htmlFor='title' className='block text-gray-700 font-bold mb-2'>
+                Title
+              </label>
+              <input 
+                type='text' 
+                id='name' 
+                className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
 
-            <label htmlFor='message' className='block text-gray-700 font-bold mb-2'>
-              How Is Your Plant Doing?
-            </label>
-            <textarea
-              rows={5}
-              id='message' 
-              className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}>
-            </textarea>
-          </div>
-          <div className='text-center'>
-            <button
-              type='submit'
-              className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg'>
-                Submit
-            </button>
-          </div>
-        </form>
+              <label htmlFor='message' className='block text-gray-700 font-bold mb-2'>
+                How Is Your Plant Doing?
+              </label>
+              <textarea
+                rows={5}
+                id='message' 
+                className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500' 
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}>
+              </textarea>
+            </div>
+            <div className='text-center'>
+              <button
+                type='submit'
+                className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg'>
+                  Submit
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div className="progress-container">
+          <FlowerPot/>
+          <ProgressBar
+            tagOptions={tagOptions}
+            selectedTag={selectedTag}
+            onTagChange={handleTagChange}
+            progress={postsMade}
+            goal={goalPosts}
+          />
+        </div>
+
+        </div>
+
         
       </main>
       <style jsx>{`
         .custom-form-width {
           max-width: 800px; /* Custom width or use a percentage like 80% */
         }
+        .container {
+          display: flex;
+          justify-content: space-between; /* This will put some space between your two components */
+          align-items: start; /* This aligns items to the start of the flex container */
+          gap: 20px; /* Optional: defines a gap between the flex items */
+        }
+        
+        .form-container,
+        .progress-container {
+          width: 50%; /* Adjust width as necessary, this gives half width to each */
+        }
+        
+        /* Add a max-width or similar if you want to constrain the container's size */
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
       `}</style>
     </div>
   );
