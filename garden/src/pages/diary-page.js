@@ -6,6 +6,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import Navbar from "../components/Navbar"; // refer to Navbar.js
 import "../app/globals.css"; // refer to format file
 import ProgressBar from "../components/ProgressBar";
+import GreenBar from '@/components/Green-diary-bar';
 import FlowerPot from "../components/Flower-pot";
 
 //backend
@@ -93,7 +94,11 @@ export default function Home() {
         </div>
 
         <div className="progress-container">
-          <FlowerPot/>
+          <div className="rounded-lg p-0 mx-6 lg:mx-10 flex justify-start items-center overflow-x-auto" >
+                <GreenBar style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 145, width: '50%'} }>
+                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
+                </GreenBar>
+          </div>
           <ProgressBar
             tagOptions={tagOptions}
             selectedTag={selectedTag}
