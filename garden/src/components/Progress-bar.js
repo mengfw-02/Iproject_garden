@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProgressBar.css'; // Ensure you have this CSS file in your project
+import './Progress-bar.css'; // Ensure you have this CSS file in your project
 
 const ProgressBar = ({ tagOptions, selectedTag, onTagChange, progress, goal }) => {
   const filledWidth = `${(progress / goal) * 100}%`;

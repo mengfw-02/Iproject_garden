@@ -17,7 +17,7 @@
   }
   
   .progress-bar-filled {
-    background-color: #4CAF50; /* Use the color you prefer */
+    background-color: #A2E7C2; /* Use the color you prefer */
     height: 100%;
     transition: width 0.3s ease-in-out;
   }
@@ -30,6 +30,7 @@
     /* ... existing styles ... */
     display: block; /* to ensure the dropdown is on a new line */
     margin-bottom: 8px;
+    color: #696969;
   }
   
   .tag-dropdown {

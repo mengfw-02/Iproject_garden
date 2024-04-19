@@ -5,7 +5,7 @@ import { db } from '../app/firebase-config'; // refer to firebase-config.js
 import { collection, addDoc } from 'firebase/firestore';
 import Navbar from "../components/Navbar"; // refer to Navbar.js
 import "../app/globals.css"; // refer to format file
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../components/Progress-bar";
 import GreenBar from '@/components/Green-diary-bar';
 import FlowerPot from "../components/Flower-pot";
 
