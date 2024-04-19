@@ -1,3 +1,4 @@
+// backend, firebase
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
