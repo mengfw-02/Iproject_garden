@@ -33,11 +33,13 @@ export default function Home() {
       alert("Data added to firestore DB!!");
     }
   };
+  
 
   return (
-    <div>
+    <div className="bg-white">
       <Navbar/>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="flex-1"> {/* Form container */}
         <h1 className="text-5xl font-bold m-10">
           New Diary Entry
         </h1>
@@ -73,9 +75,16 @@ export default function Home() {
             </button>
           </div>
         </form>
+        </div>
+        <div className="flex-1 flex justify-center items-start"> {/* SVG container */}
+        <img src="/garden/garden.svg" alt="Garden" className="max-w-md mx-auto" />
+        </div>
       </main>
       <style jsx>{`
-        .custom-form-width {
+      .bg-white {
+        background-color: white; /* Ensures the background color is white */
+      }
+      .custom-form-width {
           max-width: 800px; /* Custom width or use a percentage like 80% */
         }
       `}</style>
