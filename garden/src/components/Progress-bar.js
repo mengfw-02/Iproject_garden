@@ -16,9 +16,6 @@ const ProgressBar = ({ tagOptions, selectedTag, onTagChange, progress, goal }) =
       <div className="progress-bar">
         <div className="progress-bar-filled" style={{ width: filledWidth }}></div>
       </div>
-      <div className="reward-message text-black">
-        {goal - progress} Posts Until Reward
-      </div>
     </div>
   );
 }

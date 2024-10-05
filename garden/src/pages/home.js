@@ -2,6 +2,7 @@
 * Home/Main page containing garden bar and diary entries container 
 */
 
+import React, { useState } from 'react';
 import Navbar from "../components/Navbar"; // refer to navbar component
 import GreenBar from "../components/Green-diary-bar" // import green bar
 import FlowerPot from "../components/Flower-pot" // import flower pot
@@ -9,11 +10,12 @@ import GreyBar from "../components/Grey-diary-bar"; // import grey bar
 import WhiteBar from "../components/White-diary-entry"; // import white diary entry bar
 import "../app/globals.css"; // refer to format file
 
+
 export default function home() {
 
   return (
     <main>
-        
+
         <Navbar/>
         
         {/* Garden bar */}
@@ -41,11 +43,36 @@ export default function home() {
                 Recent Diary Entries
             </h2>
   
-            <div className="rounded-lg p-0 mx-6 lg:mx-20 flex justify-start items-center overflow-y-auto">
+            <div className="rounded-lg p-0 pb-4 mx-6 lg:mx-20 flex justify-start items-center overflow-y-auto">
                 <GreyBar style={ {width: '100%', height: '300px'} }>
-                    <WhiteBar/>
-                    <WhiteBar/>
-                    <WhiteBar/>
+                <WhiteBar
+                    icon={'/tall-flower.svg'}
+                    title={"Planted Purple Lovergrass"}
+                    date={"10/02/24"}
+                    progressMade = {3}
+                    postGoal = {5}
+                    bgColor = "#D1C4E9"
+                    
+                />      
+                <WhiteBar
+                    icon={'/short-flower.svg'}
+                    title={"Planted Magnolia Tree"}
+                    date={"09/20/24"}
+                    progressMade = {4}
+                    postGoal = {5}
+                    bgColor = "#FFCDD2"
+                    
+                />
+                <WhiteBar
+                    icon={'/tall-flower.svg'}
+                    title={"Planted Butterfly Weed"}
+                    date={"01/23/24"}
+                    progressMade = {1}
+                    postGoal = {5}
+                    bgColor = "#D1C4E9"
+                    
+                />   
+
                 </GreyBar>
             </div>          
         </div>
