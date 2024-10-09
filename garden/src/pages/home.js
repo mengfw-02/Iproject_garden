@@ -24,20 +24,20 @@ export default function home() {
                 Check Out Your Garden
             </h2>
 
-            {/* Define style/sizes here */}
+            {/* Populating Garden Bar */}
             <div className="rounded-lg p-0 mx-6 lg:mx-10 flex justify-start items-center overflow-x-auto" >
                 <GreenBar style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 145, width: '100%'} }>
-                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
-                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
-                    <FlowerPot path={'/short-flower.svg'} altername={'short flower picture'}/>
-                    <FlowerPot path={'/short-flower.svg'} altername={'short flower picture'}/>
-                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/short-flower.svg'} altername={'short flower picture'}/>
+                    <FlowerPot path={'/plants/short-flower.svg'} altername={'short flower picture'}/>
+                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
                 </GreenBar>
             </div>
 
         </div>
    
-        {/* The while recent diary collection */}
+        {/* Diary Entries Container */}
         <div className="bg-white">
             <h2 className="text-2xl font-bold text-gray-900 px-6 lg:px-8 py-4 ml-5 lg:ml-20">
                 Recent Diary Entries
@@ -45,8 +45,10 @@ export default function home() {
   
             <div className="rounded-lg p-0 pb-4 mx-6 lg:mx-20 flex justify-start items-center overflow-y-auto">
                 <GreyBar style={ {width: '100%', height: '300px'} }>
+
+                {/* Populate diary entries using whitebar components*/}
                 <WhiteBar
-                    icon={'/tall-flower.svg'}
+                    icon={'/plants/tall-flower.svg'}
                     title={"Planted Purple Lovergrass"}
                     date={"10/02/24"}
                     progressMade = {3}
@@ -55,7 +57,7 @@ export default function home() {
                     
                 />      
                 <WhiteBar
-                    icon={'/short-flower.svg'}
+                    icon={'/plants/short-flower.svg'}
                     title={"Planted Magnolia Tree"}
                     date={"09/20/24"}
                     progressMade = {4}
@@ -64,7 +66,7 @@ export default function home() {
                     
                 />
                 <WhiteBar
-                    icon={'/tall-flower.svg'}
+                    icon={'/plants/tall-flower.svg'}
                     title={"Planted Butterfly Weed"}
                     date={"01/23/24"}
                     progressMade = {1}

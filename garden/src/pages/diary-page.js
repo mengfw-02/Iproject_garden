@@ -96,7 +96,7 @@ export default function Home() {
         <div className="progress-container">
           <div className="rounded-lg p-0 mx-6 lg:mx-10 flex justify-start items-center overflow-x-auto" >
                 <GreenBar style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 145, width: '50%'} }>
-                    <FlowerPot path={'/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
                 </GreenBar>
           </div>
           <ProgressBar

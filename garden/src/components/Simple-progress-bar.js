@@ -1,7 +1,8 @@
 import React from 'react';
 import './Progress-bar.css'; // Ensure you have this CSS file in your project
 
-const ProgressBar1 = ({progress, goal }) => {
+// Simple Progress Bar Component, accepts progress (entries) and goal (# of entries for full growth)
+const SimpleProgressBar= ({progress, goal }) => {
   const filledWidth = `${(progress / goal) * 100}%`;
 
   return (
@@ -13,4 +14,4 @@ const ProgressBar1 = ({progress, goal }) => {
   );
 }
 
-export default ProgressBar1;
+export default SimpleProgressBar;
