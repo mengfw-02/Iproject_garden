@@ -15,10 +15,6 @@ const Navbar = () => {
     },
     {
       id: 2,
-      link: "my-garden",
-    },
-    {
-      id: 3,
       link: "diary-page",
     },
   ];
