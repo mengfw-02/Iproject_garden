@@ -10,8 +10,7 @@ import GreyBar from "../components/Grey-diary-bar"; // import grey bar
 import WhiteBar from "../components/White-diary-entry"; // import white diary entry bar
 import "../app/globals.css"; // refer to format file
 
-
-export default function home() {
+export default function Home() {
 
   return (
     <main>
