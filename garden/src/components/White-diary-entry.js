@@ -28,7 +28,7 @@ const WhiteBar = ({ icon, title, date, progressMade, postGoal, bgColor }) => (
         maxWidth: '110px'  
       }}
     >
-      <img src={icon} alt={title} className="w-16 h-16" />
+      <img src={icon} alt={title} className="w-20 h-24" />
     </div>
 
     {/* Flower Name and Date */}

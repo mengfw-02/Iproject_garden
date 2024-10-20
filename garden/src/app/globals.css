@@ -17,6 +17,17 @@
   }
 }
 
+html, body {
+  height: 100%; /* Make sure the html and body elements take up full viewport height */
+  margin: 0;
+}
+
+main {
+  min-height: 100vh; /* Make sure main content stretches to full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
