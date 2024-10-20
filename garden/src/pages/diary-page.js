@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { db } from '../config/firebase-config'; // refer to firebase-config.js
 import { collection, addDoc } from 'firebase/firestore';
-import Navbar from "../app/components/Navbar"; // refer to Navbar.js
+import Navbar from "../components/Navbar"; // refer to Navbar.js
 import "../app/globals.css"; // refer to format file
 
 async function addDataToFireStore(title, description) {

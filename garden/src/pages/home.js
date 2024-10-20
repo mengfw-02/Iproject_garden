@@ -2,12 +2,12 @@
 * Home/Main page containing garden bar and diary entries container 
 */
 
-import Navbar from "garden/src/components/Navbar"; // refer to navbar component
-import GreenBar from "garden/src/components/Green-diary-bar" // import green bar
-import FlowerPot from "garden/src/components/Flower-pot" // import flower pot
-import GreyBar from ".garden/src/components/Grey-diary-bar"; // import grey bar
-import WhiteBar from "garden/src/components/White-diary-entry"; // import white diary entry bar
-import "garden/src/app/globals.css"; // refer to format file
+import Navbar from "../components/Navbar"; // refer to navbar component
+import GreenBar from "../components/Green-diary-bar" // import green bar
+import FlowerPot from "../components/Flower-pot" // import flower pot
+import GreyBar from "../components/Grey-diary-bar"; // import grey bar
+import WhiteBar from "../components/White-diary-entry"; // import white diary entry bar
+import "../app/globals.css"; // refer to format file
 
 export default function Home() {
 
