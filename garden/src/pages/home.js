@@ -13,7 +13,7 @@ import "../app/globals.css"; // refer to format file
 export default function Home() {
 
   return (
-    <main>
+    <main className="flex flex-col min-h-screen">
 
         <Navbar/>
         
@@ -26,11 +26,14 @@ export default function Home() {
             {/* Populating Garden Bar */}
             <div className="rounded-lg p-0 mx-6 lg:mx-10 flex justify-start items-center overflow-x-auto" >
                 <GreenBar style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 145, width: '100%'} }>
-                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
-                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
-                    <FlowerPot path={'/plants/short-flower.svg'} altername={'short flower picture'}/>
-                    <FlowerPot path={'/plants/short-flower.svg'} altername={'short flower picture'}/>
-                    <FlowerPot path={'/plants/tall-flower.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/Orchid.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/Lavendar.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/California-sunset.svg'} altername={'short flower picture'}/>
+                    <FlowerPot path={'/plants/Birds-of-paradise.svg'} altername={'short flower picture'}/>
+                    <FlowerPot path={'/plants/Snake-plant.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/Hibiscus.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/Japanese-maple-bonsai.svg'} altername={'tall flower picture'}/>
+                    <FlowerPot path={'/plants/Creeping-jenny.svg'} altername={'tall flower picture'}/>
                 </GreenBar>
             </div>
 
@@ -43,12 +46,12 @@ export default function Home() {
             </h2>
   
             <div className="rounded-lg p-0 pb-4 mx-6 lg:mx-20 flex justify-start items-center overflow-y-auto">
-                <GreyBar style={ {width: '100%', height: '300px'} }>
+                <GreyBar style={ {width: '100%', height: '400px'} }>
 
                 {/* Populate diary entries using whitebar components*/}
                 <WhiteBar
-                    icon={'/plants/tall-flower.svg'}
-                    title={"Planted Purple Lovergrass"}
+                    icon={'/plants/Venus-fly-trap.svg'}
+                    title={"Planted Venus Fly Trap"}
                     date={"10/02/24"}
                     progressMade = {3}
                     postGoal = {5}
@@ -56,20 +59,20 @@ export default function Home() {
                     
                 />      
                 <WhiteBar
-                    icon={'/plants/short-flower.svg'}
-                    title={"Planted Magnolia Tree"}
+                    icon={'/plants/Snake-plant.svg'}
+                    title={"Planted Snake Plant"}
                     date={"09/20/24"}
                     progressMade = {4}
-                    postGoal = {5}
+                    postGoal = {8}
                     bgColor = "#FFCDD2"
                     
                 />
                 <WhiteBar
-                    icon={'/plants/tall-flower.svg'}
-                    title={"Planted Butterfly Weed"}
+                    icon={'/plants/Orchid.svg'}
+                    title={"Planted Orchid"}
                     date={"01/23/24"}
                     progressMade = {1}
-                    postGoal = {5}
+                    postGoal = {6}
                     bgColor = "#D1C4E9"
                     
                 />   

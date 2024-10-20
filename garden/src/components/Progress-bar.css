@@ -1,11 +1,26 @@
 .progress-bar-container {
-    font-family: Arial, sans-serif; /* Use your preferred font */
-  }
+  display: flex;
+  gap: 5px; /* Space between the rectangles */
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.progress-bar-rect {
+  width: 20px;
+  height: 20px;
+  background-color: #e0e0e0; /* Color for unfilled rectangles */
+  border-radius: 5px;  
+}
+
+.progress-bar-rect.filled {
+  background-color: #A2E7C2; /* Color for filled rectangles */
+}
   
   .tag-label {
     font-size: 16px;
     margin-bottom: 8px;
   }
+  
   
   .progress-bar {
     display: flex;

@@ -4,7 +4,8 @@ import React from "react";
 const GreyBar = ( {style, children} ) => {
     // this is our convention green
     const baseStyle = {
-        backgroundColor: '#D3D3D3'
+        backgroundColor: '#D3D3D3',
+        paddingBottom: '25px'
     };
 
     const combinedStyle = { ...baseStyle, ...style };
