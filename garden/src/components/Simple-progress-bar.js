@@ -20,24 +20,3 @@ const SimpleProgressBar = ({ progress }) => {
 
 export default SimpleProgressBar;
 
-
-
-/*
-const SimpleProgressBar= ({progress, goal }) => {
-  const filledWidth = `${(progress / goal) * 100}%`;
-
-
-
-
-  
-  return (
-    <div className="progress-bar-container">
-      <div className="progress-bar">
-        <div className="progress-bar-filled" style={{ width: filledWidth }}></div>
-      </div>
-    </div>
-  );
-}
-
-export default SimpleProgressBar;
-*/
