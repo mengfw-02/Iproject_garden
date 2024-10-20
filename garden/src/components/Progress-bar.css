@@ -1,0 +1,41 @@
+.progress-bar-container {
+    font-family: Arial, sans-serif; /* Use your preferred font */
+  }
+  
+  .tag-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .progress-bar {
+    display: flex;
+    height: 20px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-filled {
+    background-color: #A2E7C2; /* Use the color you prefer */
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .reward-message {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  .tag-label {
+    /* ... existing styles ... */
+    display: block; /* to ensure the dropdown is on a new line */
+    margin-bottom: 8px;
+    color: #696969;
+  }
+  
+  .tag-dropdown {
+    margin-left: 8px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }  
