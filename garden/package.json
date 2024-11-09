@@ -9,7 +9,10 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@headlessui/react": "^2.2.0",
+        "@heroicons/react": "^2.1.5",
         "firebase": "^10.14.1",
+        "mdb-react-ui-kit": "^9.0.0",
         "next": "^14.2.15",
         "react": "^18",
         "react-dom": "^18",
