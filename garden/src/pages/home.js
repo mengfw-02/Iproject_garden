@@ -60,7 +60,7 @@ export default function Home() {
                                     icon={'/plants/Venus-fly-trap.svg'}
                                     title={"Planted Venus Fly Trap"}
                                     date={"10/02/24"}
-                                    progressMade={3}
+                                    progressMade={4}
                                     postGoal={5}
                                     bgColor="#D1C4E9"
 
@@ -69,11 +69,12 @@ export default function Home() {
                                     icon={'/plants/Snake-plant.svg'}
                                     title={"Planted Snake Plant"}
                                     date={"09/20/24"}
-                                    progressMade={4}
+                                    progressMade={1}
                                     postGoal={8}
                                     bgColor="#FFCDD2"
 
                                 />
+                                
                                 <WhiteBar
                                     icon={'/plants/Orchid.svg'}
                                     title={"Planted Orchid"}
