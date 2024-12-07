@@ -1,5 +1,3 @@
-# Iproject_garden:
-
 ## Description:
 
 Hi! Welcome to our Gardening App Project! We aim to invite gardeners to post and share their diaries about their flowers and motivate them with our animated flower icons and rewards!
