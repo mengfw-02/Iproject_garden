@@ -76,7 +76,7 @@ export default function HomePage() {
                   style={{ backgroundColor: '#8FBC8F', color: "white" }}
                   onMouseEnter={(e) => (e.target.style.backgroundColor = '#527B52')}
                   onMouseLeave={(e) => (e.target.style.backgroundColor = '#8FBC8F')}
-                  onClick={() => window.location.href = '/auth/sign-in'}
+                  onClick={() => window.location.href = '/home'}
                 >
                   Sign in
                 </button>
