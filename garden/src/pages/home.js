@@ -11,10 +11,11 @@ import WhiteBar from "../components/White-diary-entry"; // import white diary en
 import "../app/globals.css"; // refer to format file
 import Square from '@/components/Bg-square';
 
+
 export default function Home() {
 
     return (
-        <main className="flex flex-col min-h-screen relative overflow-hidden">
+        <main className="flex flex-col h-screen relative overflow-hidden pb-5">
             <div className="z-10"> 
                 <Navbar/>
             </div>
@@ -47,13 +48,13 @@ export default function Home() {
                     </div>
 
                     {/* Diary Entries Container */}
-                    <div>
+                    <div className="h-[50vh] overflow-y-hidden">
                         <h2 className="text-2xl font-bold text-gray-900 px-6 lg:px-8 py-4 ml-5 lg:ml-20">
                             Recent Diary Entries
                         </h2>
 
-                        <div className="rounded-lg p-0 pb-4 mx-6 lg:mx-20 flex justify-start items-center overflow-y-auto">
-                            <GreyBar style={{ width: '100%', height: '400px' }}>
+                        <div className="rounded-lg p-0 pb-4 mx-6 lg:mx-20 flex justify-start items-center h-[43vh]">
+                            <GreyBar className="overflow-y-auto" style={{ width: '100%', height: '100%'}}>
 
                                 {/* Populate diary entries using whitebar components*/}
                                 <WhiteBar
