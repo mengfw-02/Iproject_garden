@@ -12,7 +12,7 @@ import "../app/globals.css"; // refer to format file
 import Square from '@/components/Bg-square';
 
 
-export default function Home() {
+export default function DiaryPage() {
 
     return (
         <main className="flex h-dvh w-dvw relative overflow-hidden">

@@ -24,7 +24,7 @@ async function addDataToFireStore(title, description) {
   }
 }
 
-export default function Home() {
+export default function DiaryPopup() {
   //backend
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");

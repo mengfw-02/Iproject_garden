@@ -16,7 +16,7 @@ const panelOptions = [
 {/* Profile Management Options */ }
 const profileActions = [
     { name: 'My Profile', href: '#', icon: UserCircleIcon },
-    { name: 'Logout', href: '#', icon: ArrowRightStartOnRectangleIcon },
+    { name: 'Logout', href: '/', icon: ArrowRightStartOnRectangleIcon },
 ]
 
 {/* Profile Object */}
