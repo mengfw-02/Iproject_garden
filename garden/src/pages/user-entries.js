@@ -45,11 +45,41 @@ const userEntries = [
         plant: 'Japanese Bonsai',
         plantImage: '/plants/Japanese-maple-bonsai.svg',
     },
+    {
+        id: 5,
+        href: '#',
+        entry:
+            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+        date: 'Mar 16, 2020',
+        datetime: '2020-03-16',
+        plant: 'Japanese Bonsai',
+        plantImage: '/plants/Japanese-maple-bonsai.svg',
+    },
+    {
+        id: 6,
+        href: '#',
+        entry:
+            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+        date: 'Mar 16, 2020',
+        datetime: '2020-03-16',
+        plant: 'Japanese Bonsai',
+        plantImage: '/plants/Japanese-maple-bonsai.svg',
+    },
+    {
+        id: 7,
+        href: '#',
+        entry:
+            'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+        date: 'Mar 16, 2020',
+        datetime: '2020-03-16',
+        plant: 'Japanese Bonsai',
+        plantImage: '/plants/Japanese-maple-bonsai.svg',
+    },
 ]
 
 export default function entries() {
     return (
-        <main>
+        <main className="overflow-y-auto">
             <Navbar />
 
             <div className="bg-white -z-10 mt-5 sm:py-20">
@@ -77,7 +107,8 @@ export default function entries() {
                     </div>
 
                     {/* Diary Entries on Grid */}
-                    <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-4 sm:mt-4 sm:pt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                    <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16
+                    border-t border-gray-200 pt-4 sm:mt-4 sm:pt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 overflow-y-auto">
                         {userEntries.map((post) => (
                             <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
                                 <div className="flex items-center justify-center gap-x-4 text-xs">

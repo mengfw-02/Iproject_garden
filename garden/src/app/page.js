@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
 
       {/* Container with sign in element container, green "grass bar," and plants*/}
-      <div className="flex flex-col min-h-screen px-0">
+      <div className="flex flex-col min-h-screen px-0" style={{ backgroundColor: '#E0E4E4' }}>
 
         <div className="flex min-h-full flex-1 flex-col justify-start px-0 py-3 lg:px-8 relative z-10">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm mt-5">
@@ -76,7 +76,7 @@ export default function HomePage() {
                   style={{ backgroundColor: '#8FBC8F', color: "white" }}
                   onMouseEnter={(e) => (e.target.style.backgroundColor = '#527B52')}
                   onMouseLeave={(e) => (e.target.style.backgroundColor = '#8FBC8F')}
-                  onClick={() => window.location.href = '/auth/sign-in'}
+                  onClick={() => window.location.href = '/home'}
                 >
                   Sign in
                 </button>
